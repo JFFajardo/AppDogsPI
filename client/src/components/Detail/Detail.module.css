@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  max-width: 900px;
+  margin: 10px auto;
+  height: auto;
+  font-family: 'Summer in December';
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+.button {
+  background-color: #000072;
+
+  width: 150px;
+  font-size: 22px;
+  font-family: 'Summer in December';
+  border-radius: 10px;
+  color: #f5f5dc;
+
+  text-shadow: 0 0 10px black;
+  margin: 10px;
+  border-color: #258cb9;
+  border-style: double;
+}
+
+.button:hover {
+  background-color: #419eb3;
+  color: #000072;
+  border-color: #000072;
+  cursor: url(../../assets/img/Huella.png), auto;
+}
+
+.card_container {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border: solid 3px #419eb3;
+  background: linear-gradient(45deg, #258cb9, #3d1441);
+}
+
+.header {
+  margin: 5px;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.header img {
+  margin: 5px;
+  max-width: 100%;
+  height: auto;
+  border: solid 3px #419eb3;
+}
+
+.header p {
+  padding: 5px;
+  margin: 5px;
+  color: #000072;
+  text-shadow: 0 0 10px #f5f5dc;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: 'Summer in December';
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  max-width: 400px;
+  height: auto;
+  border: solid 3px #419eb3;
+  position: relative;
+  margin: 10px;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  background-image: conic-gradient(beige 60deg, transparent 120deg);
+  width: 150%;
+  height: 150%;
+  position: absolute;
+  left: -20%;
+  top: -20%;
+  animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.card::after {
+  content: '';
+  width: 94%;
+  height: 94%;
+  position: absolute;
+  left: 3%;
+  top: 3%;
+  border-radius: 3px;
+  background: linear-gradient(30deg, #4a1e4e, #a9a2a2);
+}
+
+.details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-family: 'Summer in December';
+  text-shadow: 0 0 5px #f5f5dc, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #141314, 0 0 25px #7aad03;
+  z-index: 1;
+}
+
+.details h2 {
+  color: #000072;
+  font-size: 30px;  
+  border-bottom: #3d1441 solid 1px;
+  width: fit-content;
+}
+
+.details p {
+  margin: 10px;
+  color: #000072;
+  font-size: 22px;
+  
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+
+  .button {
+    font-size: 20px;
+    margin: 8px;
+  }
+
+  .card_container {
+    margin: 10px;
+  }
+
+  .card {
+    width: 95%;
+    max-width: 350px;
+    margin: 10px;
+  }
+
+  .header img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .details h2 {
+    font-size: 18px;  
+  }
+  
+  .details p {
+    margin: 10px;
+    color: #3d1441;
+    font-size: 12px;
+    font-weight: bold;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .button {
+    font-size: 18px;
+    margin: 6px;
+  }
+
+  .card_container {
+    margin: 10px;
+  }
+
+  .card {
+    width: 95%;
+    max-width: 300px;
+    margin: 10px;
+  }
+
+  .header p {
+    font-size: 32px;
+  }
+}

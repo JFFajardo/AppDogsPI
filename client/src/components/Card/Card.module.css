@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: max-content;
+  background: linear-gradient(30deg, #4a1e4e, #a9a2a2);
+  font-family: 'Summer in December';
+  animation: glow 1s ease-in-out infinite alternate;
+  padding: 2px;
+  margin: 15px;
+}
+
+.container:hover {
+  background: linear-gradient(45deg, #258cb9, #3d1441);
+  opacity: 90%;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0px 0px 5px 5px #f5f5dc;
+  }
+  to {
+    box-shadow: 0px 0px 10px 10px wheat;
+  }
+}
+
+.card_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+}
+
+.header {
+  margin: 5px;
+  width: min-content;
+  text-align: center;
+  align-items: center;
+  text-decoration: none;
+  border-bottom: #000072 3px solid;
+}
+
+.header img {
+  margin: 2px;
+  width: 180px;
+  height: 180px;
+  border: solid 3px #a9a2a2;
+  cursor: url(../../assets/img/Huella.png), auto;
+}
+
+.header p {
+  padding: 2px;
+  margin: 2px;
+  color: #000072;
+  text-shadow: 0 0 10px #f5f5dc;
+  font-size: 28px;
+  font-weight: bold;
+  font-family: 'Summer in December';
+}
+
+.text_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: fit-content;
+  margin: 5px;
+  /* background: linear-gradient(5deg, #a9a2a2, #1f1f81); */
+}
+
+.text_container:hover {
+  opacity: 90%;
+}
+
+.text_container p {
+  margin: 10px;
+  color: #000072;
+  text-shadow: 0 0 10px #f5f5dc;
+  font-size: 23px;
+ 
+}
+
+.text_container h5 {
+  color: #000072;
+  text-shadow: 0 0 10px #f5f5dc;
+  font-size: 18px;
+  border-top: #000072 solid 3px;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    width: 80%;
+  }
+
+  .header img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .header p {
+    font-size: 14px;
+  }
+
+  .text_container p {
+    font-size: 12px;
+  }
+
+  .text_container h5 {
+    font-size: 14px;
+  }
+}

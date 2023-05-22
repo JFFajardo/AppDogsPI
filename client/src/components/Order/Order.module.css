@@ -1,0 +1,60 @@
+.box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5px; 
+}
+
+.box h4{
+  margin: 3px;
+  color: #000072;
+  font-family: 'Summer in December';
+  font-size: 38px;
+  
+}
+  
+.box select {
+  margin: 5px;
+  background-color: #419eb3;
+  color: #000072;
+  font-family: 'Summer in December';
+  font-size: 24px;
+  padding: 3px;
+  width: fit-content;
+  border-radius: 10px;
+  border-color: beige;
+  border-style: double;  
+  -webkit-appearance: button;
+  appearance: button;
+  outline: none;    
+  text-align: center;
+}
+
+.box select:hover,
+.box select:focus {
+  color: beige;
+  background-color: #000072;
+  border-color: #258cb9;
+  cursor: url(../../assets/img/hueso2.png), auto;
+}
+@media screen and (max-width: 1000px) {
+  .box h4 {
+    font-size: 18px;
+  }
+
+  .box select {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .box h4 {
+    font-size: 16px;
+  }
+
+  .box select {
+    font-size: 14px;
+  }
+}
+  

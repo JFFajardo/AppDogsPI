@@ -1,0 +1,79 @@
+.divSearch{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    align-items: center;
+    margin: 5px;    
+}
+
+.input{
+    display: flex;
+    color: #000072;
+    background-color: #419eb3;
+    font-family: 'Summer in December';
+    font-size: 30px;
+    margin: 3px;
+    border-radius: 10px;
+    border-color: beige;
+    border-style: double;
+    caret-color: beige;
+}
+
+.input::placeholder{
+  color: #000072;
+    text-align: center;
+}
+.button{
+    width: 150px;
+    background-color: #000072;
+    font-size: 30px;    
+    font-family: 'Summer in December';
+    border-radius: 10px;
+    color: #f5f5dc;
+    text-shadow: 0 0 10px black;
+    margin: 10px; 
+    border-color: #258cb9;
+    border-style: double; 
+    cursor: url(../../assets/img/Huella.png), auto;
+}
+
+.button:hover{
+  background-color: #419eb3;
+  color: #000072;
+  border-color: #000072;
+  cursor: url(../../assets/img/Huella.png), auto;
+}
+
+@media screen and (max-width: 1000px) {
+    .divSearch {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      background-color: transparent;
+    }
+  
+    .div {
+      display: flex;
+      justify-content: center;
+    }
+  
+    .button {
+      font-size: 18px;
+      width: 80px;
+      margin: 5px;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    .input {
+      font-size: 16px;
+    }
+  
+    .button {
+      font-size: 14px;
+      width: 70px;
+      margin: 2px;
+    }
+  }

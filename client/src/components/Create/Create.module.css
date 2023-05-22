@@ -1,0 +1,266 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: 'Summer in December';
+}
+
+.container p {
+  font-size: 40px;
+  color: #000072; 
+  text-shadow: 0 0 5px  beige, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #000, 0 0 25px #258cb9;
+  -webkit-text-fill-color: #000072;
+  -webkit-text-stroke-color: #258cb9;
+  -webkit-text-stroke-width:0.2px; 
+  width: max-content;
+  align-self: center;
+}
+
+/* FORMULARIO */
+
+.form {
+  font-size: 22px;
+  color: #000072;
+  text-shadow: 0 0 10px #f5f5dc;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 80%;
+  margin: 60px;  
+  background: linear-gradient(45deg, #3d1441, #258cb9);
+  opacity: 90%;
+}
+
+.form span {
+  color: #aa0000;
+  text-shadow: none;
+  border-bottom: #aa0000 1px solid;
+  font-size: 28px;
+  font-style: oblique;
+  padding: 1px;
+  margin: 5px;
+}
+
+.form input {
+  border: 2px solid #258cb9;
+  background: beige;
+  width: 200px;
+  font-size: 20px;
+  font-family: 'Summer in December';
+  color: #000072;
+  text-shadow: 0 0 8px beige;
+  caret-color: #000072;
+  margin: 5px;
+}
+
+.form input::placeholder {
+  color: #7070ed;
+}
+
+.form input:focus {
+  outline: none;
+  border: 2px solid #44fb08;
+}
+
+.form h3{
+  color: #44fb08;
+}
+
+/* IMAGEN */
+
+.divImagen {
+  display: flex;
+  justify-content: center;
+}
+
+.divImagen img {
+  width: 200px;
+  border: #258cb9 2px solid;
+}
+
+.divImagen button {
+  width: 200px;
+  align-self: center;
+  border-color: #258cb9;
+  background-color: #000072;
+  font-size: 26px;
+
+  font-family: 'Summer in December';
+  border-radius: 10px;
+  color: #f5f5dc;
+  text-shadow: 0 0 10px black;
+  margin: 10px;
+}
+
+.divImagen button:hover{
+  background-color: #419eb3;
+  color: #000072;
+  border-color: #000072;
+  cursor: url(../../assets/img/Huella.png), auto;
+}
+
+/* BOTONES */
+
+.button {
+  width: 150px;
+  background-color: #000072;
+  font-size: 24px;
+  font-family: 'Summer in December';
+  border-radius: 10px;
+  color: #f5f5dc;
+  text-shadow: 0 0 10px black;
+  margin: 10px;
+  border-color: #258cb9;
+  border-style: double;
+}
+
+.button:hover{
+  background-color: #419eb3;
+  color: #000072;
+  border-color: #000072;
+  cursor: url(../../assets/img/Huella.png), auto;
+}
+
+.buttonOk {
+  width: 150px;
+  background-color: #005c12;
+  font-size: 24px;
+  font-family: 'Summer in December';
+  border-radius: 10px;
+  color: #61a6b5;
+  text-shadow: 0 0 10px black;
+  margin: 10px;
+  border-color: #61a6b5;
+  border-style: double;
+}
+/* SELECTOR TEMPERAMENTOS */
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  list-style: none;
+}
+
+
+  .box select {
+    margin: 10px;
+    background-color: #419eb3;
+    color: #000072;
+    font-family: 'Summer in December';
+    font-size: 22px;
+    padding: 5px;
+    width: max-content;
+    border-radius: 10px;
+    border-color: beige;
+    border-style: double;
+    -webkit-appearance: button;
+    appearance: button;
+    outline: none;
+  }
+  
+  .box select:hover,
+  .box select:focus {
+    color: beige;
+    background-color: #000072;
+    border-color: #258cb9;
+  }
+  
+  .box ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2px;
+    width: 90%;
+    padding: 2px;
+  }
+  
+  .box li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+    background-color: #258cb9;
+    color: black;
+    border: solid 1px beige;
+    margin: 5px;
+    width: max-content;
+  }
+  
+  .box ul button {
+    background-color: beige;
+    width: 40px;
+    border-color: #000072;
+    font-size: 20px;
+  }
+  
+  .box ul button:hover {
+    background-color: #000072;
+    width: 40px;
+    border-color: beige;
+    font-size: 20px;
+    color: beige;
+    cursor: url(../../assets/img/Huella.png), auto;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .container p {
+      font-size: 22px;
+    }
+    .form {
+      width: 90%;      
+      height: max-content;
+      margin: 15px;
+    }
+
+    .box select{
+      font-size: 22px;
+    }
+    .box li {
+      font-size: 22px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+     
+    .form {
+      width: 90%;
+      margin: 20px;
+    }
+  
+    .form input {
+      width: 100%;
+    }
+  
+    .divImagen img {
+      width: 150px;
+    }
+  
+    .divImagen button {
+      width: 150px;
+    }
+  
+    .button {
+      width: 120px;
+    }
+  
+    .box select {
+      font-size: 20px;
+    }
+  
+    .box li {
+      font-size: 20px;
+    }
+  
+    .box ul button {
+      font-size: 18px;
+    }
+  }

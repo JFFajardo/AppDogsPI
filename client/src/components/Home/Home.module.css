@@ -1,0 +1,132 @@
+*{
+  box-sizing:border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.div_card{
+  display: flex;  
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center; 
+  margin: auto;      
+  align-content: center;
+  align-items: center;
+  width: 95%;  
+}
+
+.div_filters{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;    
+  align-items: center;
+  width: 95%;    
+  margin: auto;  
+}
+
+.div_pages{ 
+  font-size: 18px;
+  margin: auto; 
+  align-items: center;
+  width: 95%;  
+}
+
+.container{
+      font-family: 'Summer in December';
+
+  font-size: 50px;
+ color: #000072; 
+     text-shadow: 0 0 10px #f5f5dc;
+
+  
+}
+
+.button{
+  width: 150px;
+  background-color: #000072;
+  font-size: 2vw;
+  font-family: 'Summer in December';
+  border-radius: 10px;
+  color: #f5f5dc;
+  text-shadow: 0 0 10px black;
+  margin: 1.5vw; 
+  border-color: #258cb9;
+  border-style: double; 
+  cursor: url(../../assets/img/Huella.png), auto;
+}
+
+.button:hover{
+  background-color: #419eb3;
+  color: #000072;
+  border-color: #000072;
+  cursor: url(../../assets/img/Huella.png), auto;
+}
+
+.img{
+  border-radius: 10%;
+  width: 100%;
+  max-width: 300px;
+  border: double beige 4px;
+  opacity: 90%;
+  box-shadow: 14px 10px 16px #419eb3;
+}
+
+/* FOOTER */
+
+footer{
+  width: 100%;
+  height: 50px;
+  background-color: #000072;
+  border-top: 15px solid beige;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin-top: 1%;
+  font-family: 'Summer in December';
+}
+
+footer p{
+  color: beige;
+  font-size: 28px; 
+
+}
+
+@media screen and (max-width: 1000px) {
+  .div_card {
+    width: 90%;
+  }
+
+  .div_filters {
+    width: min-content;
+  }
+
+  .div_pages {
+    width: 90%;
+  }
+
+  .container {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .div_card {
+    width: 100%;
+  }
+
+  .div_filters {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .div_pages {
+    width: 100%;
+    text-align: center;
+  }
+
+  .container {
+    font-size: 20px;
+  }
+}

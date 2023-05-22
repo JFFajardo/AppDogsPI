@@ -1,0 +1,41 @@
+@font-face {
+  font-family: 'Summer in December';
+  src: url('./assets/summer_in_december.ttf') format('truetype');
+}
+
+*{
+  cursor: url(./assets/img/hueso2.png), auto;  
+}
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;  
+  background-image: url(./assets/img/fondo.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment:fixed;
+  height: 100%;
+}
+
+::-webkit-scrollbar{
+  width: 15px;
+}
+::-webkit-scrollbar-track{
+  background: #000072;
+}
+
+::-webkit-scrollbar-thumb{
+  background: #7df2f0;
+}
+
+::-webkit-scrollbar-button{
+  background: beige;
+}
+
+::-webkit-scrollbar-track-piece{
+  background: #000072;
+}
+
+
+
+

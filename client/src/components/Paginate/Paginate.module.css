@@ -1,0 +1,54 @@
+.pages {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;  
+    font-family: 'Summer in December';  
+}
+  
+.pageNumber {
+    display: flex;
+    align-items: center;
+    width: 70px;
+    justify-content: center; 
+    color: #000072;
+    font-weight: bold;
+    border: solid #419eb3 3px;
+    border-radius: 100%;   
+    margin: 3px;
+    user-select: none;
+    background-color:beige;
+}
+
+.pageNumber:hover {
+    background-color: #258cb9;
+    color: beige;
+    border-color: #000072;
+    cursor: url(../../assets/img/Huella.png), auto;
+}
+  
+.page_disabled {
+    list-style: none;
+    background-color:#9df9c1;
+    border-color: #000072;
+
+}
+.page_disabled:hover {
+    background-color: #49f88f;
+    color: #3d1441;
+    cursor: not-allowed;
+}
+  
+.activePage{
+    background-color:#49f88f;
+    color: #000072;
+    border-color: #000072;
+}
+
+ 
+@media (min-width:500px) {
+    .pageNumber {
+      width: 45px;
+      height: 45px;
+    }
+} 

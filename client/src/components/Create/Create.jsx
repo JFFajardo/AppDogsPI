@@ -30,11 +30,11 @@ const Create = () => {
 
     useEffect(() => {
         return () => { dispatch(getDogs())}
-    }, [])
+    }, [dispatch])
 
     useEffect (() => {
         dispatch(getTemperaments())
-    }, [])
+    }, [dispatch])
 
     useEffect(() => {
         if (dogCreated) {

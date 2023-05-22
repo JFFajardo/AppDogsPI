@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getDogs, getTemperaments } from "../../redux/actions";
+import { getTemperaments } from "../../redux/actions";
 import Nav from '../Nav/Nav';
 import SearchBar from '../SearchBar/SearchBar';
 import Filters from '../Filters/Filters';
@@ -29,7 +29,7 @@ const Home = () => {
   //Para Manejar el Paginado
 
   const [actualPage, setActualPage] = useState(1); //arrancamos desde la page 1
-  const [dogsPerPage, setDogsPerPage] = useState(8); //cuantos dogs por page
+  const [dogsPerPage] = useState(8); //cuantos dogs por page
   
   const indexOfLastDog = actualPage * dogsPerPage;
   const indexOfFirstDog = indexOfLastDog - dogsPerPage;
@@ -58,7 +58,7 @@ const Home = () => {
   useEffect(() => {
     // !dogsFilters.length && dispatch(getDogs())
     dispatch(getTemperaments())
-  }, [])
+  }, [dispatch])
 
 
 

@@ -40,8 +40,11 @@ const Create = () => {
         if (dogCreated) {
           setShowForm(false); // Oculta el formulario
           setTimeout(() => {
-            setShowForm(true); // Muestra el formulario 
+            setShowForm(true); // Muestra el formulario          
           }, 200);
+          setTimeout(() =>{
+            setDogCreated (false) 
+        } ,3000) 
         }
       }, [dogCreated]);
 
@@ -52,7 +55,6 @@ const Create = () => {
             const newDog ={
                 ...input,
                 name: input.name.trim(),
-                // image: input.image.trim(),
                 temperaments: tempsDB
             }
             dispatch(createDog(newDog))
@@ -223,17 +225,14 @@ const Create = () => {
                 </ul>
                 </div>
                 
-                <div>
-                {dogCreated ? (
-                      <button disabled={dogCreated} className={styles.buttonOk} >
-                      DOG CREATED
-                  </button>                   
-                ) : (
+                <div>         
                     <button disabled={!isFormValid} className={styles.button} onClick={handleSubmit}>
                         CREATE DOG
                     </button>
-                )}
-            </div>
+                    { dogCreated && <button className={styles.buttonOk}>  
+                    DOG CREATED </button>
+                    }
+                </div>
             </form>
             )}
         </div>

@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 import { useParams, Link } from "react-router-dom";
 import { useDispatch, useSelector} from 'react-redux';
-import { getById, clearDetail, deleteDog, getDogs } from "../../redux/actions";
+import { getById, clearDetail, deleteDog,} from "../../redux/actions";
 import Loader from '../Loader/Loader'
 import styles from './Detail.module.css';
 
@@ -20,9 +20,9 @@ const Detail = () => {
       dispatch(deleteDog(id))       
    }
 
-   useEffect(() => {
-      return () => { dispatch(getDogs())}
-  }, [dispatch])
+//    useEffect(() => {
+//       return () => { dispatch(getDogs())}
+//   }, [dispatch])
 
   if (Array.isArray(details)) {
       return <Loader />; 

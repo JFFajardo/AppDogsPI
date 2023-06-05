@@ -1,3 +1,10 @@
+.land{
+  width: 100%;
+  height: 100vh;
+  background: url(../../assets/img/landingDog.gif) center fixed;
+  background-size: cover; 
+}
+
 .container{
   position: absolute;
   top: 50%;
@@ -7,7 +14,7 @@
   margin: 20px;
   font-family: 'Summer in December';
   text-shadow: 0 0 5px #f5f5dc;
-  color: #1212a6;
+  color: #7df2f0;
   -webkit-text-stroke-color: #000000;
   -webkit-text-stroke-width:0.5px; 
   font-size: 3vw; 
@@ -15,72 +22,12 @@
 }
 
 
-
-/* .dot {
-  content: '';
-  position: absolute;
-  top: 0;
-  width: 100px;
-  height: 100%;
-  transition: all 1s ease;
-  display: none;
-}
-  
-.dot:after {
-  content: '';
-  position: absolute;
-  left: 32px;
-  top: calc(50%-32px);
-  height: 64px;
-  width: 64px;
-  background: orangered;
-  border-radius: 0;
-  border: 15px solid black ;
-  box-shadow: 0 0 11.2px silver, 0 0 2px brown;
-  transform-origin: right center;
-}
-
-  
-  .dot,
-  .div:focus .dot {
-    animation: ball 3s infinite linear;
-    display: block;
-  }
-  @keyframes ball {
-    0% {transform: translateX(0) rotate(0);}
-    25%{transform: translateX(200px) rotate(0);}
-    50% {transform: translateX(200px) rotate(180deg);}
-    75% {transform: translateX(0) rotate(180deg);}
-    100% {transform: translateX(0) rotate(360deg);}
-  }   */
-
-/* .button{
-  width: 180px;
-  background: linear-gradient(30deg, orange, gold);
-  font-size: 30px;
-  font-weight: bold;
-  font-family: 'Courier New', Courier, monospace;
-  border-radius: 10px;
-  color: #3d1441;
-  text-shadow: 0 0 10px black;
-  margin: 10px; 
-  border-color: #3d1441;
-  border-style: double; 
-  cursor: url(../../assets/img/Huella.png), auto;
-}
-  
-.button:hover{
-  color: beige;
-  background: #3d1441;
-  border-color: gold;
-  cursor: url(../../assets/img/Huella.png), auto;
-} */
 :root {
   --clr-neon: #7df2f0;
   --clr-bg: #ffffff;
 }
 .neon_button {
-  font-size: 40px;
+  font-size: 46px;
   margin: 20px;
   display: inline-block;
   color: var(--clr-neon);
@@ -124,7 +71,7 @@
 
 .neon_button:hover,
 .neon_button:focus {
-  color: var(--clr-bg);
+  color: black;
   text-shadow: none;
   cursor: url(../../assets/img/Huella.png), auto;
 }

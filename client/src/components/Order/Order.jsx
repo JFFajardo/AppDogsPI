@@ -4,6 +4,7 @@ import { orderByName, orderByWeight } from '../../redux/actions';
 import styles from './Order.module.css';
 
 const Order = ({ setMinPage, setMaxPage, setActualPage, setOrder}) => {
+    
     const dispatch = useDispatch();
 
     const handleOrder = (event) => {

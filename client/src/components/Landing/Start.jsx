@@ -11,11 +11,11 @@ export default function Start () {
 
     useEffect(() => {
         return () => { dispatch(getDogs())}
-    }, [])
+    }, [dispatch])
 
-    return(          
-        <div className={styles.container}>          
-           
+    return(       
+        <div className={styles.land}>
+                 <div className={styles.container}>          
                 <div className={styles.div}> 
                     <h1>WELCOME TO JOHAN DOGS APP</h1>
                     <div className={styles.dot}></div>
@@ -26,5 +26,7 @@ export default function Start () {
                         </div>
                 </div>     
         </div>
+        </div>   
+   
     )
 } 

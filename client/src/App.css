@@ -39,18 +39,3 @@
 }
 
 
-footer{
-  width: 100%;
-  height: 50px;
-  background-color: black;
-  border-top: 25px solid gold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-footer p{
-  color: beige;
-  font-size: 18px; 
-}
-

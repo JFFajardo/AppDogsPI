@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import { filterByCreated, filterByTemperament, getDogs} from '../../redux/actions';
+import { filterData} from '../../redux/actions';
 import styles from './Filters.module.css';
 
 const Filters = ({setMinPage, setMaxPage, setActualPage}) => {
+
    const temperamentState = useSelector(state => state.temperaments)
 
+   const [filters, setFilters] = useState({origin: 'all', temperament: 'any'})
    const dispatch = useDispatch();
    
    const handleFilterCreated = (event) => {
@@ -13,16 +15,19 @@ const Filters = ({setMinPage, setMaxPage, setActualPage}) => {
       setActualPage(1)
       setMinPage(0)
       setMaxPage(5)
-      dispatch(filterByCreated(event.target.value))
-      // dispatch(getDogs())
+      setFilters({...filters, origin: event.target.value})
    }
 
    const handleFilterTemperaments = (event) => {
       setActualPage(1)
       setMinPage(0)
       setMaxPage(5)
-      dispatch(filterByTemperament(event.target.value)) 
+      setFilters({...filters, temperament: event.target.value})   
    }
+
+   useEffect (() => {
+      dispatch(filterData(filters)) 
+   }, [dispatch, filters])
 
    return (
       <div>         
@@ -41,8 +46,8 @@ const Filters = ({setMinPage, setMaxPage, setActualPage}) => {
                <select 
                defaultValue='DEFAULT'
                onChange={(event) => handleFilterTemperaments(event)}>
-                  <option value= 'DEFAULT'>Select Temperament</option>
-                  <option key={0} value= 'all'>All</option>
+                  <option value= 'any'>Select Temperament</option>
+                  <option key={0} value= 'any'>ANY</option>
                   {temperamentState.length
                      ? temperamentState.map((temp) => (
                         <option key={temp.id} value={temp.name}>

@@ -1,7 +1,6 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React, {useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getTemperaments } from "../../redux/actions";
+import { getDogs, getTemperaments } from "../../redux/actions";
 import Nav from '../Nav/Nav';
 import SearchBar from '../SearchBar/SearchBar';
 import Filters from '../Filters/Filters';
@@ -12,6 +11,7 @@ import Loader from '../Loader/Loader';
 
 import styles from './Home.module.css'
 import gato from '../../assets/img/billy.jpg'
+
 
 const Home = () => {
 
@@ -26,14 +26,12 @@ const Home = () => {
 
   const [order, setOrder] = useState("");
 
-  //Para Manejar el Paginado
-
-  const [actualPage, setActualPage] = useState(1); //arrancamos desde la page 1
-  const [dogsPerPage] = useState(8); //cuantos dogs por page
-  
+  //Paginado
+  const [actualPage, setActualPage] = useState(1); //Inicio desde la page 1
+  const [dogsPerPage] = useState(8); // dogs por page  
   const indexOfLastDog = actualPage * dogsPerPage;
   const indexOfFirstDog = indexOfLastDog - dogsPerPage;
-  const actualDogs = dogsFilters.slice(indexOfFirstDog, indexOfLastDog); //recortamos el arreglo con todos los dogs
+  const actualDogs = dogsFilters.slice(indexOfFirstDog, indexOfLastDog); //recorta el arreglo con todos los dogs
   const [minPage, setMinPage] = useState(0)
   const [maxPage, setMaxPage] = useState(5)
 
@@ -54,9 +52,11 @@ const Home = () => {
     console.log(actualDogs);
   }, [actualDogs])
 
+  useEffect(() => {
+    dispatch(getDogs())
+  }, [])
 
   useEffect(() => {
-    // !dogsFilters.length && dispatch(getDogs())
     dispatch(getTemperaments())
   }, [dispatch])
 
@@ -73,7 +73,8 @@ const Home = () => {
       <Filters 
       setMinPage={setMinPage}
       setMaxPage={setMaxPage}
-      setActualPage={setActualPage} />        
+      setActualPage={setActualPage}
+      />        
       <Order 
       setMinPage={setMinPage}
       setMaxPage={setMaxPage}

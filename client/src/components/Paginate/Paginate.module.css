@@ -29,18 +29,18 @@
   
 .page_disabled {
     list-style: none;
-    background-color:#9df9c1;
+    background-color:#a9a2a2;
     border-color: #000072;
 
 }
 .page_disabled:hover {
-    background-color: #49f88f;
+    background-color: #a9a2a2;
     color: #3d1441;
     cursor: not-allowed;
 }
   
 .activePage{
-    background-color:#49f88f;
+    background-color:#419eb3;
     color: #000072;
     border-color: #000072;
 }

@@ -4,15 +4,16 @@ const { getDogById } = require('../controllers/getDogById')
 const { postDog } = require('../controllers/postDog')
 const { getTemperaments} = require('../controllers/getTemperaments');
 const { deleteDog } = require('../controllers/deleteDog');
+const {postTemperament} = require ('../controllers/postTemperament')
 
 // Importar todos los routers;
 // Ejemplo: const authRouter = require('./auth.js');
-
 
 const router = Router();
 
 // Configurar los routers
 // Ejemplo: router.use('/auth', authRouter);
+
 router.get('/dogs', (req, res) =>{
     getDogs(req, res);
 })
@@ -23,6 +24,10 @@ router.get('/dogs/:id', (req, res) =>{
 
 router.post('/dogs', (req, res) =>{
     postDog(req, res);
+})
+
+router.post('/temperaments', (req, res) => {
+    postTemperament(req,res);
 })
 
 router.get("/temperaments", (req, res)=>{

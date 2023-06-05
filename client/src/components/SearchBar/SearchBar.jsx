@@ -27,11 +27,12 @@ const SearchBar = ({setMinPage, setMaxPage, setActualPage}) => {
          setActualPage(1)
          setMinPage(0)
          setMaxPage(5)
-         setName('')
+
       }
    }
    const handleRefresh = () => {
       dispatch(getDogs())
+      setName('')
     }
 
    return (
@@ -39,7 +40,8 @@ const SearchBar = ({setMinPage, setMaxPage, setActualPage}) => {
          <input 
          className= {styles.input} 
          type='text' 
-         placeholder='Insert Dog Name'         
+         placeholder='Insert Breed Dog Name'  
+         value={name}       
          onChange= {(event) => handleChange(event)}></input>
          <button 
          className= {styles.button} 

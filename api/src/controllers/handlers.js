@@ -2,7 +2,7 @@ const axios = require("axios");
 const { Dog, DogTemperaments } = require("../db.js");
 const { API_KEY, API_URL } = process.env;
 
-//Se trae la información de la api y se transforma al tipo de dato que se va a usar
+//Se trae la información de la api
 const dataApi = async () => {
 
   const apiDogs = await axios.get(`${API_URL}?api_key=${API_KEY}`)

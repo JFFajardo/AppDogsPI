@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { GET_DOGS, GET_TEMPERAMENTS, GET_BY_NAME, GET_BY_ID, CLEAR_DETAIL, CREATE_DOG, FILTER_BY_CREATED, FILTER_BY_TEMPERAMENT, ORDER_BY_NAME, ORDER_BY_WEIGHT, DELETE_DOG } from "./action-types";
+import { GET_DOGS, GET_TEMPERAMENTS, GET_BY_NAME, GET_BY_ID, CLEAR_DETAIL, CREATE_DOG, FILTERS, ORDER_BY_NAME, ORDER_BY_WEIGHT, DELETE_DOG } from "./action-types";
 
 export const getDogs = () => {
   const endpoint = 'http://localhost:3001/dogs';
@@ -76,16 +76,9 @@ export const clearDetail = () => {
   }
 }
 
-export const filterByCreated = (payload) => {
+export const filterData = (payload) => {
   return{
-    type: FILTER_BY_CREATED,
-    payload,
-  }
-}
-
-export const filterByTemperament = (payload) => {
-  return{
-    type: FILTER_BY_TEMPERAMENT,
+    type: FILTERS,
     payload,
   }
 }

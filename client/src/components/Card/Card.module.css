@@ -45,12 +45,12 @@
   text-align: center;
   align-items: center;
   text-decoration: none;
-  border-bottom: #000072 3px solid;
+  border-bottom: #000000 3px solid;
 }
 
 .header img {
   margin: 2px;
-  width: 180px;
+  width: 200px;
   height: 180px;
   border: solid 3px #a9a2a2;
   cursor: url(../../assets/img/Huella.png), auto;
@@ -59,7 +59,7 @@
 .header p {
   padding: 2px;
   margin: 2px;
-  color: #000072;
+  color: #000000;
   text-shadow: 0 0 10px #f5f5dc;
   font-size: 28px;
   font-weight: bold;
@@ -82,17 +82,17 @@
 
 .text_container p {
   margin: 10px;
-  color: #000072;
+  color: #000000;
   text-shadow: 0 0 10px #f5f5dc;
-  font-size: 23px;
+  font-size: 24px;
  
 }
 
 .text_container h5 {
-  color: #000072;
+  color: #000000;
   text-shadow: 0 0 10px #f5f5dc;
-  font-size: 18px;
-  border-top: #000072 solid 3px;
+  font-size: 20px;
+  border-top: #000000 solid 3px;
 }
 
 @media screen and (max-width: 768px) {

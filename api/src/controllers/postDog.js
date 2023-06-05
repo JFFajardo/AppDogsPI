@@ -29,34 +29,7 @@ const postDog = async (req,res) => {
   catch (error) {
     return res.status(500).send(error.message);
   }
-
-  // const {id,name,image,height,weight,life_span,temperament} = req.body;
-
-  // if(!name || !height || !weight || !life_span || !temperament) {
-  //   return res.status(400).send('Faltan datos');
-  // }
-
-  // const tempsId = temperament.map(temp => temp.id);
-
-  // try {
-  //   const newDog = await Dog.create({
-  //       id,
-  //       name,
-  //       image : !image ? null : image,
-  //       height,
-  //       weight,
-  //       life_span,
-  //   })
-
-  //   await newDog.addDogTemperaments(tempsId);
-
-  //   return newDog
-  //     ? res.status(200).json(newDog)
-  //     : res.status(400).send(`Dog already exists`)
-
-  // } catch (error) {
-  //   return res.status(500).send(error.message);
-  // } 
+ 
 }
 
 module.exports = {

@@ -9,11 +9,11 @@ const Card = ({ id, name, image, weight, temperaments }) => {
             <Link className={styles.header} to={"/dogs/" + id}>
             <div >
               <img src={image} alt={name}/>
-               <p>{name}</p>                        
+               <p>🐶 {name}</p>                        
             </div>
             </Link>
         <div className={styles.text_container}>        
-          <p >{temperaments}</p>      
+          <p >{temperaments}</p>       
           <h5 >{weight} kg</h5>        
         </div>
         

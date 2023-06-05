@@ -1,7 +1,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-content: center;
   margin: 0;
   padding: 0;
@@ -11,7 +11,7 @@
 
 .container p {
   font-size: 40px;
-  color: #000072; 
+  color: #000000; 
   text-shadow: 0 0 5px  beige, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #000, 0 0 25px #258cb9;
   -webkit-text-fill-color: #000072;
   -webkit-text-stroke-color: #258cb9;
@@ -31,7 +31,7 @@
   align-self: center;
   width: 80%;
   margin: 60px;  
-  background: linear-gradient(45deg, #3d1441, #258cb9);
+  background: #a9a2a2;
   opacity: 90%;
 }
 

@@ -15,7 +15,7 @@ body {
   background-position: center;
   background-attachment:fixed; */
   height: 100%;
-  background: linear-gradient(30deg, #4a1e4e, #a9a2a2);
+  background: linear-gradient(30deg, #4a1e4e, #d6cdcd);
 }
 
 ::-webkit-scrollbar{

@@ -109,7 +109,7 @@ const Home = () => {
           !dogsFilters.length 
           ? <Loader /> 
           : <div >
-            <h3>Dog not found!</h3>
+            <h3>¡Dog not found!</h3>
             <img className={styles.img} src={gato} alt="Not Found" />
             </div>
         )} 
